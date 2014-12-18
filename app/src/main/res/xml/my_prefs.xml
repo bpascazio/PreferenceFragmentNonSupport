@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <CheckBoxPreference
+       android:title="Decide Something"
+       android:defaultValue="true"
+       android:summary="this helps you decide something"
+       android:key="somekey">
+   </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:title="Decide Something"
+        android:defaultValue="true"
+        android:summary="this helps you decide something"
+        android:key="somekey">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:title="Decide Something"
+        android:defaultValue="true"
+        android:summary="this helps you decide something"
+        android:key="somekey">
+    </CheckBoxPreference>
+
+    <SwitchPreference
+        android:title="Switch Pref"
+        android:defaultValue="true">
+    </SwitchPreference>
+
+</PreferenceScreen>
