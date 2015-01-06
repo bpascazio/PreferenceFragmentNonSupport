@@ -1,13 +1,16 @@
 package com.example.sscsis.preferencefragmentnonsupport;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 
 /**
@@ -67,6 +70,20 @@ public class DisplayFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_display, container, false);
         Log.d("onCreateView", "called");
+
+        SharedPreferences prefs =
+                PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        boolean powerValue = prefs.getBoolean("powerPref", false);
+
+        ImageView bulb = (ImageView)view.findViewById(R.id.displayView);
+        if (powerValue == true) {
+            bulb.setImageResource(R.drawable.bulbon);
+        } else {
+            bulb.setImageResource(R.drawable.bulboff);
+        }
+
+
         return view;
     }
 

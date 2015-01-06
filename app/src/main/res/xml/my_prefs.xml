@@ -31,7 +31,7 @@
     <SwitchPreference
         android:key="powerPref"
         android:title="Power"
-        android:defaultValue="true">
+        android:defaultValue="false">
     </SwitchPreference>
 
 </PreferenceScreen>
