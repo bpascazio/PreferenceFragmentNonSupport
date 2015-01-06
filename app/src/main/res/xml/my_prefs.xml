@@ -5,29 +5,31 @@
        android:title="Decide Something"
        android:defaultValue="true"
        android:summary="this helps you decide something"
-       android:key="somekey">
+       android:key="somekey1">
    </CheckBoxPreference>
 
     <CheckBoxPreference
         android:title="Decide Something"
         android:defaultValue="true"
         android:summary="this helps you decide something"
-        android:key="somekey">
+        android:key="somekey2">
     </CheckBoxPreference>
 
     <CheckBoxPreference
         android:title="Decide Something"
         android:defaultValue="true"
         android:summary="this helps you decide something"
-        android:key="somekey">
+        android:key="somekey3">
     </CheckBoxPreference>
 
     <SwitchPreference
+        android:key="switchPref"
         android:title="Switch Pref"
         android:defaultValue="true">
     </SwitchPreference>
 
     <SwitchPreference
+        android:key="powerPref"
         android:title="Power"
         android:defaultValue="true">
     </SwitchPreference>
