@@ -3,6 +3,7 @@ package com.example.sscsis.preferencefragmentnonsupport;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.view.LayoutInflater;
@@ -13,7 +14,7 @@ import android.view.ViewGroup;
 import android.os.Build;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements DisplayFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new DisplayFragment())
                     .commit();
         }
     }
@@ -43,10 +44,23 @@ public class MainActivity extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.container, new PlaceholderFragment())
+                    .commit();
+            return true;
+        } else if (id == R.id.action_main) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.container, new DisplayFragment())
+                    .commit();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
     /**

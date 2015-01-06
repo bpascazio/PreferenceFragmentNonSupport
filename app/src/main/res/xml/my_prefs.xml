@@ -27,4 +27,9 @@
         android:defaultValue="true">
     </SwitchPreference>
 
+    <SwitchPreference
+        android:title="Power"
+        android:defaultValue="true">
+    </SwitchPreference>
+
 </PreferenceScreen>
